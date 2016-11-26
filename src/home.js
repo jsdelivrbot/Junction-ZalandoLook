@@ -20,20 +20,20 @@ export class Home {
   "html":"#/item/3",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 4,
+  "html":"#/item/1",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 5,
+  "html":"#/item/1",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 6,
+  "html":"#/item/1",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 7,
+  "html":"#/item/1",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   }
   ];
@@ -44,7 +44,7 @@ export class Home {
   }
 
   activate() {
-    alert(zalandoService.articles());
+    // alert(zalandoService.articles());
     // if(this.token){
       // return this.zalandoService.recent()
       //   .then(res => res.response.data)
