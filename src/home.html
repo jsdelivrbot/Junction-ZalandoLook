@@ -1,0 +1,23 @@
+<template>
+  <div class="jumbotron">
+    <h2 class="text-center">${heading}</h2>
+    <p class="text-center">
+      <a click.trigger="sigin()" class="btn btn-primary" if.bind="!token">Login</a>
+      <a click.trigger="signout()" class="btn btn-warning" if.bind="token">Logout</a>
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="col-md-4" repeat.for="huy of recent">
+      <div class="panel panel-default">
+        <div class="panel-body">
+        <a href.bind="huy.url">
+          <img src.bind="huy.url" class="img-responsive" alt=""/>
+          </a>
+          <a class="btn btn-primary" if.bind="!token">Like</a>
+        </div>
+        <div class="panel-footer"><strong>${post.caption.from.full_name} </strong> ${post.caption.text}</div>
+      </div>
+    </div>
+  </div>
+</template>
