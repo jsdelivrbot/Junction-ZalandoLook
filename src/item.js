@@ -1,28 +1,30 @@
 import {inject} from 'aurelia-framework';
 import {initialize} from 'aurelia-pal-browser';
 import {ZalandoService} from './zalando-service';
+import {parseArticle} from 'utilities';
 initialize();
 
-// @inject(ZalandoService)
+@inject(ZalandoService)
 export class Item {
-  heading = "";
-  shopUrl="";
-  photo = "images/img.jpeg"
 
-  constructor(){
-    // this.zalandoService = zalandoService;
+  constructor(zalandoService){
+    this.zalandoService = zalandoService;
   }
 
   activate(params, routeConfig) {
     this.routeConfig = routeConfig;
-    this.item = {"id":params.id};
-    // return this.zalandoService.articles()
-    //   .then(res => res.content)
-    //   .then(me =>
-    //     {
-    //       this.item = item
-    //       this.heading=item.name
-    //       this.shopUrl=item.shopUrl
-    //     });
+    var id = params.id;
+    var a1 = this.zalandoService.articleById(id).then(
+      article_raw => {
+        var article = parseArticle(article_raw);
+        this.photo = article.imageUrl;
+        this.item = {
+          "id":article.id,
+          "name":article.name,
+          "shopUrl":article.shopUrl
+        };
+      },
+      error => alert("Rejected: " + error)
+    );
   }
 }

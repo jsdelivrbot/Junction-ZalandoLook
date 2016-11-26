@@ -1,57 +1,28 @@
 import {inject} from 'aurelia-framework';
 import {initialize} from 'aurelia-pal-browser';
 import {ZalandoService} from './zalando-service';
+import {parseArticle} from 'utilities';
 initialize();
 
 @inject(ZalandoService)
 export class Home {
   heading = "Welcome to ZalandoLooks";
-  token = localStorage.getItem('token');
-  recent = [
-  {"id": 1,
-  "html":"#/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 2,
-  "html":"#/item/2",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 3,
-  "html":"#/item/3",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 4,
-  "html":"#/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 5,
-  "html":"#/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 6,
-  "html":"#/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  },
-  {"id": 7,
-  "html":"#/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
-  }
-  ];
-  post_images = [];
+  recent = [];
 
-  constructor(zalandoService){
+  constructor(zalandoService) {
     this.zalandoService = zalandoService;
   }
 
   activate() {
-    // alert(zalandoService.articles());
-    // if(this.token){
-      // return this.zalandoService.recent()
-      //   .then(res => res.response.data)
-      //   .then(recent =>
-      //     {
-      //       this.recent = recent
-      //     });
-    // }
+    this.zalandoService.articles()
+      .then(res => res.content)
+      .then(articles => {
+              for (var i = 0; i < Object.keys(articles).length; i++) {
+                  var article = articles[i];
+                  this.recent.push(parseArticle(article, "item"));
+              }
+            },
+            error => alert("Rejected: " + error)
+      );
   }
 }

@@ -1,0 +1,14 @@
+<template>
+   <div class="jumbotron">
+      <h2 class="text-center">${look.name}</h2>
+      <p class="text-center"> 
+         <img src.bind="photo" alt="" width="600"> 
+      </p>
+      <table class="tg" cellpadding="10">
+         <tr repeat.for="item of items">
+            <th class="tg-baqh"><img src.bind="item.imageUrl" width="40" alt="" style="border-radius: 100px"></th>
+            <th class="tg-yw4l">${item.name}</th>
+         </tr>
+      </table>
+   </div>
+</template>

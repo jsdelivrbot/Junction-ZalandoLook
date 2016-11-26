@@ -1,12 +1,13 @@
 <template>
 
   <div class="container">
-    <div class="col-md-4" repeat.for="item of recent">
+    <div class="col-md-4" repeat.for="look of looks">
       <div class="panel panel-default">
         <div class="panel-body">
-        <a href.bind="item.html">
-          <img src.bind="item.imageUrl" class="img-responsive" alt=""/>
+          <a href.bind="look.html">
+            <img src.bind="look.imageUrl" class="img-responsive" alt=""/>
           </a>
+          <a class="btn likebutton" if.bind="!token"/>
         </div>
         <div class="panel-footer"><strong>${post.caption.from.full_name} </strong> ${post.caption.text}</div>
       </div>
