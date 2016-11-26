@@ -9,15 +9,15 @@ export class Home {
   token = localStorage.getItem('token');
   recent = [
   {"id": 1,
-  "html":"/item/1",
+  "html":"#/item/1",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 2,
+  "html":"#/item/2",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
-  {"id": 1,
-  "html":"/item/1",
+  {"id": 3,
+  "html":"#/item/3",
   "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
   },
   {"id": 1,
@@ -44,6 +44,7 @@ export class Home {
   }
 
   activate() {
+    alert(zalandoService.articles());
     // if(this.token){
       // return this.zalandoService.recent()
       //   .then(res => res.response.data)
