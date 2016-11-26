@@ -6,8 +6,16 @@
       </p>
       <table class="tg" cellpadding="10">
          <tr repeat.for="item of items">
-            <th class="tg-baqh"><img src.bind="item.imageUrl" width="40" alt="" style="border-radius: 100px"></th>
-            <th class="tg-yw4l">${item.name}</th>
+               <th class="tg-baqh">
+                  <a href.bind="item.shopUrl">
+                     <img src.bind="item.imageUrl" width="40" alt="" style="border-radius: 100px">
+                  </a>
+               </th>
+               <th class="tg-yw4l">
+                  <a href.bind="item.shopUrl">
+                     <span>${item.name}</span>
+                  </a>
+               </th>
          </tr>
       </table>
    </div>

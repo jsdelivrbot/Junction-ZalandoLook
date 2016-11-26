@@ -187,3 +187,11 @@ background-repeat:no-repeat;
 .tg{
   margin: 0 auto;
 }
+.like{ 
+font-size: 40px; /*размер лайка*/ 
+color: #bcb7b7; /*цвет лайка по умолчанию*/ 
+cursor: pointer; 
+-webkit-user-select: none; 
+-moz-user-select: none; 
+-ms-user-select: none; 
+} 

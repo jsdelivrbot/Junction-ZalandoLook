@@ -1,5 +1,4 @@
 <template>
-
   <div class="container">
     <div class="col-md-4" repeat.for="look of looks">
       <div class="panel panel-default">
@@ -7,7 +6,9 @@
           <a href.bind="look.html">
             <img src.bind="look.imageUrl" class="img-responsive" alt=""/>
           </a>
-          <a class="btn likebutton" if.bind="!token"/>
+          <div class="like" name="likeid" >
+            <span >❤</span>
+          </div>
         </div>
         <div class="panel-footer"><strong>${post.caption.from.full_name} </strong> ${post.caption.text}</div>
       </div>

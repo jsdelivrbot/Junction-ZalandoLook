@@ -15,3 +15,15 @@ export function parseArticle (article, type) {
   };
   return res;
 }
+
+
+function id(e) {
+  return document.getElementById(e);
+} 
+function like() {
+  if (id("likeid").style.color=="red") { 
+    id("likeid").style.color="#bcb7b7"; 
+  } else { 
+    id("likeid").style.color="red"; 
+  } 
+} 
