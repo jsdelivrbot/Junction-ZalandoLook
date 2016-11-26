@@ -2,7 +2,7 @@
   "github:github/fetch@0.10.1": {},
   "github:systemjs/plugin-css@0.1.20": {},
   "github:twbs/bootstrap@3.3.6": {
-    "jquery": "github:components/jquery"
+    "jquery": "jspm:jquery@2"
   },
   "npm:aurelia-history@1.0.0-beta.1.1.1": {},
   "npm:font-awesome@4.5.0": {
@@ -206,12 +206,7 @@
     "assert": "github:jspm/nodelibs-assert@^0.1.0"
   },
   "npm:debug@2.2.0": {
-    "ms": "npm:ms@0.7.1",
-    "tty": "github:jspm/nodelibs-tty@^0.1.0",
-    "util": "github:jspm/nodelibs-util@^0.1.0",
-    "fs": "github:jspm/nodelibs-fs@^0.1.0",
-    "net": "github:jspm/nodelibs-net@^0.1.0",
-    "process": "github:jspm/nodelibs-process@^0.1.0"
+    "ms": "npm:ms@0.7.1"
   },
   "npm:object-keys@0.4.0": {},
   "npm:express@3.21.2": {
@@ -654,7 +649,6 @@
     "assert": "github:jspm/nodelibs-assert@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0"
   },
-  "npm:tty-browserify@0.0.0": {},
   "npm:depd@1.1.0": {
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "path": "github:jspm/nodelibs-path@^0.1.0",
@@ -695,9 +689,6 @@
     "randombytes": "npm:randombytes@^2.0.0"
   },
   "npm:events@1.0.2": {},
-  "github:jspm/nodelibs-tty@0.1.0": {
-    "tty-browserify": "npm:tty-browserify@0.0.0"
-  },
   "npm:buffer-shims@1.0.0": {
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
   },

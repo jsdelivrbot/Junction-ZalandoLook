@@ -1,32 +1,24 @@
 import {inject} from 'aurelia-framework';
 import {initialize} from 'aurelia-pal-browser';
-import {AuthService} from './auth-service';
-import {IgService} from './ig-service';
+import {ZalandoService} from './zalando-service';
 initialize();
 
-@inject(AuthService, IgService)
+@inject(ZalandoService)
 export class Home {
-  heading = "Welcome to Scotch IG";
+  heading = "Welcome to ZalandoLooks";
   token = localStorage.getItem('token');
-  recent = [{"url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"}];
+  recent = [{"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"}];
   post_images = [];
 
-  constructor(authService, igService){
-    this.authService = authService;
-    this.igService = igService;
-  }
-
-  sigin() {
-    this.authService.sigin();
-  }
-
-  signout() {
-    this.authService.signout();
+  constructor(zalandoService){
+    this.zalandoService = zalandoService;
   }
 
   activate() {
     // if(this.token){
-      // return this.igService.recent()
+      // return this.zalandoService.recent()
       //   .then(res => res.response.data)
       //   .then(recent =>
       //     {

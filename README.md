@@ -1,9 +1,6 @@
-# Scotch Aurelia
-- Clone
-```bash
-git clone https://github.com/christiannwamba/scotch-aurelia
-```
-- Install Server
+# Aurelia demo project for Zalando API
+- Install Node.js
+- Install http server
 ```bash
 npm install -g http-server
 ```
