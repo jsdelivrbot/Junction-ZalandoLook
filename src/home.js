@@ -7,9 +7,36 @@ initialize();
 export class Home {
   heading = "Welcome to ZalandoLooks";
   token = localStorage.getItem('token');
-  recent = [{"id": 1,
+  recent = [
+  {"id": 1,
   "html":"/item/1",
-  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"}];
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  },
+  {"id": 1,
+  "html":"/item/1",
+  "url": "https://scotch.io/wp-content/uploads/2016/06/QFjcXTrPSwCffGwtDrTJ_build-a-mini-instagram-app-with-aurelia.png"
+  }
+  ];
   post_images = [];
 
   constructor(zalandoService){

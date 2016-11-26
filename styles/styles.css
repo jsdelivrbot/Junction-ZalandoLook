@@ -173,3 +173,13 @@ div.au-stagger {
     opacity: 1;
   }
 }
+
+.likebutton{ 
+position:absolute; 
+transition: .5s ease; 
+top:10%; 
+left: 73%; 
+background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/i..'); 
+background-position:center; 
+background-repeat:no-repeat; 
+}
